@@ -163,7 +163,7 @@ def get_random_region_targets(given_layers, graphs, targets):
                     every_point = tuple(every_point.tolist())
                     if abs(every_point[0] - unnormalized_point[0]) <= 2 and abs(every_point[1] - unnormalized_point[1]) <= 2:
                         indices_for_semantic.append(ind)
-            #assert len(unnormalized_points) == len(indices_for_semantic)
+            assert len(unnormalized_points) == len(indices_for_semantic)
             semantic_left_up = []
             semantic_right_up = []
             semantic_right_down = []
