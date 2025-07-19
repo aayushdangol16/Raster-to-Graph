@@ -130,7 +130,6 @@ def get_random_region_targets(given_layers, graphs, targets):
         graphs_i = graphs[bs_i]
         given_layers_i = given_layers[bs_i]
         sampled_points_i, sampled_edges_i = given_layers_i
-
         if sum(sampled_points_i.values()) == 0:
             random_region_target['edges'] = targets_i['edges'][:1]
 
