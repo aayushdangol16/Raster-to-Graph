@@ -96,7 +96,8 @@ def get_given_layers_random_region(targets, graphs):
             for sampled_point in all_sampled_points:
                 adj = set(graphs_i[sampled_point])
                 all_sampled_points_adjs = all_sampled_points_adjs.union(adj)
-            all_sampled_points_adjs.remove((-1, -1))
+            if (-1, -1) in all_sampled_points_adjs:
+                all_sampled_points_adjs.remove((-1, -1))
             all_sampled_points_adjs = list(all_sampled_points_adjs.difference(all_sampled_points))
             # shuffle the last layer to let it uniform (no bias of sample order)
             random.shuffle(all_sampled_points_adjs)
