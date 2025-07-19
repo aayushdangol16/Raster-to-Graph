@@ -133,7 +133,7 @@ def get_random_region_targets(given_layers, graphs, targets):
         print(given_layers)
         print(graphs)
         print(targets)
-
+        break
         if sum(sampled_points_i.values()) == 0:
             random_region_target['edges'] = targets_i['edges'][:1]
 
